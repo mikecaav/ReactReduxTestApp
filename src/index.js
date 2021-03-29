@@ -33,7 +33,10 @@ const counter = (state= 0, action) =>{
 
 // STORE
 let store = createStore(counter)
+store.subscribe(() => console.log(store.getState()))
 
+// DISPATCH
+store.dispatch(decrement())
 
 ReactDOM.render(
   <React.StrictMode>
